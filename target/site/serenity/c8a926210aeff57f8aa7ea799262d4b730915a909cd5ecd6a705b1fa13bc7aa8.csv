@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login en la pagina your company","Realizar un login Fallido","ERROR","2024-12-09T23:13:25.6844274-05:00[America/Bogota]","0.0","2.83"
+"Login en la pagina your company","Realizar un login Exitoso","ERROR","2024-12-09T23:13:28.5335067-05:00[America/Bogota]","0.0","0.87"

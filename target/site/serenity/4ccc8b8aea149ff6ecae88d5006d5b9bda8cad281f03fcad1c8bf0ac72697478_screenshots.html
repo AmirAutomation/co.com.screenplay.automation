@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="03fb072037c3d45030376906aa5b1d092b5fd62b7e4361103394799af5ffb91f.html">Login En La Pagina Your Company</a></span>
+                > <span class="truncate-60"><a
+                    href="4ccc8b8aea149ff6ecae88d5006d5b9bda8cad281f03fcad1c8bf0ac72697478.html">Realizar un login Exitoso </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-12-2024 23:16</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Login En La Pagina Your Company </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Yo como usuario<br />
+Quiero realizar un login<br />
+Para validar los distintos escearios que se le pueden presentar a los usuarios
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="901a16addd7ad231632ad2e18e1d74b49d28dedb318edbd466ba95227415665f.html">Login Succefull
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="773a571d092c5846a3019576b732f5fa2a9b129891c011c10cda8839a7f193e0.html">Regresion
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Realizar un login Exitoso
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="effcf928ed957b1aafc3bc6553f8087111fdb332ed35561a0be5cda6b2fa8358.png" title=" Dado que el actor abre el navegador en la pagina de your company" width="1920"/>
+                <img src="effcf928ed957b1aafc3bc6553f8087111fdb332ed35561a0be5cda6b2fa8358.png" title=" Amir open web" width="1920"/>
+                <img src="effcf928ed957b1aafc3bc6553f8087111fdb332ed35561a0be5cda6b2fa8358.png" title=" AMIR opens the browser at http://www.automationpractice.pl" width="1920"/>
+                <img src="effcf928ed957b1aafc3bc6553f8087111fdb332ed35561a0be5cda6b2fa8358.png" title=" Amir open web (completed)" width="1920"/>
+                <img src="effcf928ed957b1aafc3bc6553f8087111fdb332ed35561a0be5cda6b2fa8358.png" title=" Dado que el actor abre el navegador en la pagina de your company (completed)" width="1920"/>
+                <img src="f751de0588eecddc05bf4f99c2f2e07ce343d88f2799f73cc1c38f923891ec65.png" title=" Y ingresa al modulo Sign in" width="1920"/>
+                <img src="f751de0588eecddc05bf4f99c2f2e07ce343d88f2799f73cc1c38f923891ec65.png" title=" Amir sign in" width="1920"/>
+                <img src="f751de0588eecddc05bf4f99c2f2e07ce343d88f2799f73cc1c38f923891ec65.png" title=" AMIR clicks on Boton Sing in" width="1920"/>
+                <img src="f751de0588eecddc05bf4f99c2f2e07ce343d88f2799f73cc1c38f923891ec65.png" title=" Amir sign in (completed)" width="1920"/>
+                <img src="f751de0588eecddc05bf4f99c2f2e07ce343d88f2799f73cc1c38f923891ec65.png" title=" Y ingresa al modulo Sign in (completed)" width="1920"/>
+                <img src="1de4004c123e72586a015c5a5856967802764c15644a745c823286983d2ddd95.png" title=" Cuando ingresa el correo &quot;amirr10c@gmail.com&quot; y contrase&ntilde;a &quot;Amir123456789&quot; correctamente" width="1920"/>
+                <img src="1de4004c123e72586a015c5a5856967802764c15644a745c823286983d2ddd95.png" title=" Amir correctly credentials" width="1920"/>
+                <img src="1de4004c123e72586a015c5a5856967802764c15644a745c823286983d2ddd95.png" title=" AMIR enters 'amirr10c@gmail.com' into Txt email" width="1920"/>
+                <img src="1de4004c123e72586a015c5a5856967802764c15644a745c823286983d2ddd95.png" title=" AMIR enters 'Amir123456789' into Txt Password" width="1920"/>
+                <img src="fe82657f19a755f12c13ed99246886f8f1fd86b6bc8b021dff20391c65f62134.png" title=" AMIR enters 'Amir123456789' into Txt Password (completed)" width="1920"/>
+                <img src="fe82657f19a755f12c13ed99246886f8f1fd86b6bc8b021dff20391c65f62134.png" title=" AMIR clicks on Boton Sing" width="1920"/>
+                <img src="2efd4c78bd281df0fb70fd0b3337002578c605950a1e1692d2c2f1c4674b72f6.png" title=" AMIR clicks on Boton Sing (completed)" width="1920"/>
+                <img src="2efd4c78bd281df0fb70fd0b3337002578c605950a1e1692d2c2f1c4674b72f6.png" title=" Amir correctly credentials (completed)" width="1920"/>
+                <img src="2efd4c78bd281df0fb70fd0b3337002578c605950a1e1692d2c2f1c4674b72f6.png" title=" Cuando ingresa el correo &quot;amirr10c@gmail.com&quot; y contrase&ntilde;a &quot;Amir123456789&quot; correctamente (completed)" width="1920"/>
+                <img src="2efd4c78bd281df0fb70fd0b3337002578c605950a1e1692d2c2f1c4674b72f6.png" title=" Entonces visualizaremos el home de la tienda de compra" width="1920"/>
+                <img src="2efd4c78bd281df0fb70fd0b3337002578c605950a1e1692d2c2f1c4674b72f6.png" title=" Then login success: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.4</span>
+</div>
+</body>
+</html>
