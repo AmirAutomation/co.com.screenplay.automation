@@ -17,3 +17,6 @@ out/
 !**/src/test/**/out/
 
 target/
+site/
+.csv
+.html

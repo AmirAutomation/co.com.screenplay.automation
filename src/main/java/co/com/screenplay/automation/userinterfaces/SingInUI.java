@@ -15,6 +15,11 @@ public class SingInUI {
             .located(By.xpath("//a[contains(text(),'Forgot your password?')]"));
 
     public static final Target ALERT_INVALID_PASSWORD = Target.the("")
-            .located(By.xpath("//li[contains(text(),'Authentication failed.')]"));
+            .located(By.xpath("//li[contains(text(),'{0}')]"));
+
+    public static Target ALERT_ERROR(String mesanje){
+        return Target.the("")
+                .located(By.xpath("//li[contains(text(),'"+mesanje+"')]"));
+    }
 
 }

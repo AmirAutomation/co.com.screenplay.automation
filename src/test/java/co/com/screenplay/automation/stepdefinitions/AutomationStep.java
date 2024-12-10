@@ -17,10 +17,10 @@ public class AutomationStep {
     public void EnterCredentialsWrongly(String correo, String password) {
         OnStage.theActorCalled(ACTOR).attemptsTo(InvalidCredentials.getInto(correo,password));
     }
-    @Then("visualizaremos una alerta de error en la autenticacion")
-    public void WeWillDisplayAnAuthenticationErrorAlert() {
+    @Then("se visualizara una alerta con el mensaje de error {string}")
+    public void WeWillDisplayAnAuthenticationErrorAlert(String mensajeValidation) {
         theActorInTheSpotlight().should(seeThat(
-                LoginFailed.validar("Authentication failed."))
+                LoginFailed.validar(mensajeValidation))
         );
     }
 

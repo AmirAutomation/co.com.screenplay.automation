@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Login en la pagina your company" skipped="0" tests="2" time="24.48" timestamp="2024-12-09 11:15:56"><testcase name="Realizar un login Fallido"/><testcase name="Realizar un login Exitoso"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Login en la pagina your company" skipped="0" tests="1" time="12.88" timestamp="2024-12-10 08:46:44"><testcase name="Realizar un login Fallido"/></testsuite>
