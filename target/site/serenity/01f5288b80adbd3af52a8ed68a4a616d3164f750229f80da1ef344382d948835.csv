@@ -1,3 +1,6 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Login en la pagina your company","Realizar un login Fallido","SUCCESS","2024-12-09T23:15:56.0563074-05:00[America/Bogota]","0.0","15.3"
 "Login en la pagina your company","Realizar un login Exitoso","SUCCESS","2024-12-09T23:16:11.6269526-05:00[America/Bogota]","0.0","9.18"
+"Login en la pagina your company","Realizar un login Fallido","SUCCESS","2024-12-10T08:46:44.2377125-05:00[America/Bogota]","0.0","12.88"
+"Login en la pagina your company","El suaurio realiza un login Fallido","SUCCESS","2024-12-10T09:21:27.340953-05:00[America/Bogota]","0.0","12.02"
+"Login en la pagina your company","El suaurio realiza un login Exitoso","SUCCESS","2024-12-10T09:21:39.5318145-05:00[America/Bogota]","0.0","8.55"
+"Login en la pagina your company","validar el campo email address como requerido","SUCCESS","2024-12-10T09:21:48.2315917-05:00[America/Bogota]","0.0","15.97"

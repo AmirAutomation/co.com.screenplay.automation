@@ -1,10 +1,11 @@
 package co.com.screenplay.automation.questions;
 
+import co.com.screenplay.automation.userinterfaces.SingInUI;
 import lombok.AllArgsConstructor;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-import static co.com.screenplay.automation.userinterfaces.SingInUI.ALERT_INVALID_PASSWORD;
+import static co.com.screenplay.automation.userinterfaces.SingInUI.*;
 
 @AllArgsConstructor
 public class LoginFailed implements Question<Boolean> {
@@ -15,7 +16,7 @@ public class LoginFailed implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
         boolean result;
 
-        if (alertLoginFailed.equals(ALERT_INVALID_PASSWORD.resolveFor(actor).getText())){
+        if (alertLoginFailed.equals(SingInUI.ALERT_ERROR(alertLoginFailed).resolveFor(actor).getText())){
             result = true;
         }else{
             result = false;

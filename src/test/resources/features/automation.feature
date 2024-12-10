@@ -12,11 +12,21 @@ Característica: Login en la pagina your company
     Y ingresa al modulo Sign in
 
   @loginFailed
-  Escenario: Realizar un login Fallido
+  Escenario: El suaurio realiza un login Fallido
     Cuando ingresa el correo "amirssac@gmail.com" y contraseña "Amir1ss" erroneamente
-    Entonces visualizaremos una alerta de error en la autenticacion
+    Entonces se visualizara una alerta con el mensaje de error "Authentication failed."
 
   @loginSuccefull
-  Escenario: Realizar un login Exitoso
+  Escenario: El suaurio realiza un login Exitoso
     Cuando ingresa el correo "amirr10c@gmail.com" y contraseña "Amir123456789" correctamente
     Entonces visualizaremos el home de la tienda de compra
+
+  @fieldEmailRequired
+  Escenario: validar el campo email address como requerido
+    Cuando ingresa el correo "" y contraseña "Amir123456789" correctamente
+    Entonces se visualizara una alerta con el mensaje de error "An email address required."
+
+  @fieldPasswordRequired
+  Escenario: validar el campo email address como requerido
+    Cuando ingresa el correo "amirr10c@gmail.com" y contraseña "" correctamente
+    Entonces se visualizara una alerta con el mensaje de error "Password is required."
